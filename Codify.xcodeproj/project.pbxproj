@@ -13,6 +13,7 @@
 		2774571B1B77807D00AA0EFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2774571A1B77807D00AA0EFD /* Images.xcassets */; };
 		2774571E1B77807D00AA0EFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2774571C1B77807D00AA0EFD /* LaunchScreen.xib */; };
 		2774572A1B77807D00AA0EFD /* CodifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277457291B77807D00AA0EFD /* CodifyTests.swift */; };
+		27F6C5761B7798C200C41301 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27F6C5751B7798C200C41301 /* Credentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		277457231B77807D00AA0EFD /* CodifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277457281B77807D00AA0EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277457291B77807D00AA0EFD /* CodifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodifyTests.swift; sourceTree = "<group>"; };
+		27F6C5751B7798C200C41301 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Credentials.plist; path = ../../codify/Codify/Credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				277457121B77807D00AA0EFD /* Info.plist */,
+				27F6C5751B7798C200C41301 /* Credentials.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277457191B77807D00AA0EFD /* Main.storyboard in Resources */,
+				27F6C5761B7798C200C41301 /* Credentials.plist in Resources */,
 				2774571E1B77807D00AA0EFD /* LaunchScreen.xib in Resources */,
 				2774571B1B77807D00AA0EFD /* Images.xcassets in Resources */,
 			);
@@ -411,6 +415,7 @@
 				2774572F1B77807D00AA0EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		277457301B77807D00AA0EFD /* Build configuration list for PBXNativeTarget "CodifyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				277457321B77807D00AA0EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
