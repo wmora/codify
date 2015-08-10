@@ -12,10 +12,10 @@
 		277457191B77807D00AA0EFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277457171B77807D00AA0EFD /* Main.storyboard */; };
 		2774571B1B77807D00AA0EFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2774571A1B77807D00AA0EFD /* Images.xcassets */; };
 		2774571E1B77807D00AA0EFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2774571C1B77807D00AA0EFD /* LaunchScreen.xib */; };
-		2774572A1B77807D00AA0EFD /* CodifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277457291B77807D00AA0EFD /* CodifyTests.swift */; };
 		27F6C5761B7798C200C41301 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27F6C5751B7798C200C41301 /* Credentials.plist */; };
 		27F6C57A1B78070C00C41301 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */; };
 		27F6C57C1B780BB800C41301 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57B1B780BB800C41301 /* AuthorizationService.swift */; };
+		27F6C57E1B78246500C41301 /* AuthorizationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +38,10 @@
 		2774571D1B77807D00AA0EFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		277457231B77807D00AA0EFD /* CodifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277457281B77807D00AA0EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		277457291B77807D00AA0EFD /* CodifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodifyTests.swift; sourceTree = "<group>"; };
 		27F6C5751B7798C200C41301 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Credentials.plist; path = ../../codify/Codify/Credentials.plist; sourceTree = "<group>"; };
 		27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = ../../codify/Codify/AuthorizationViewController.swift; sourceTree = "<group>"; };
 		27F6C57B1B780BB800C41301 /* AuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationService.swift; path = ../../codify/Codify/AuthorizationService.swift; sourceTree = "<group>"; };
+		27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationServiceTest.swift; path = ../../codify/CodifyTests/AuthorizationServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 		277457261B77807D00AA0EFD /* CodifyTests */ = {
 			isa = PBXGroup;
 			children = (
-				277457291B77807D00AA0EFD /* CodifyTests.swift */,
 				277457271B77807D00AA0EFD /* Supporting Files */,
+				27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */,
 			);
 			path = CodifyTests;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2774572A1B77807D00AA0EFD /* CodifyTests.swift in Sources */,
+				27F6C57E1B78246500C41301 /* AuthorizationServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -385,6 +386,7 @@
 				INFOPLIST_FILE = CodifyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Codify.app/Codify";
 			};
 			name = Debug;
@@ -393,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

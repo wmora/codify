@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AuthorizationService {
+public class AuthorizationService {
     
     let clientIdPlistKey = "GitHub Client ID"
     let clientSecretPlistKey = "GitHub Client Secret"
@@ -18,11 +18,14 @@ class AuthorizationService {
     let scopeKey = "scope"
     let state = "state"
     
+    public init() {
+    }
+    
     func authorizationRequest() -> NSURLRequest {
         return NSURLRequest(URL: authorizationRequestURL())
     }
     
-    func authorizationRequestURL() -> NSURL {
+    public func authorizationRequestURL() -> NSURL {
         let credentialsPath = NSBundle.mainBundle().pathForResource("Credentials", ofType: "plist")
         let credentials = NSDictionary(contentsOfFile: credentialsPath!)!
         let clientId = credentials[clientIdPlistKey] as! NSString
