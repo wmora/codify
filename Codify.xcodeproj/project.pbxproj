@@ -14,6 +14,8 @@
 		2774571E1B77807D00AA0EFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2774571C1B77807D00AA0EFD /* LaunchScreen.xib */; };
 		2774572A1B77807D00AA0EFD /* CodifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277457291B77807D00AA0EFD /* CodifyTests.swift */; };
 		27F6C5761B7798C200C41301 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27F6C5751B7798C200C41301 /* Credentials.plist */; };
+		27F6C57A1B78070C00C41301 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */; };
+		27F6C57C1B780BB800C41301 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57B1B780BB800C41301 /* AuthorizationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		277457281B77807D00AA0EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277457291B77807D00AA0EFD /* CodifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodifyTests.swift; sourceTree = "<group>"; };
 		27F6C5751B7798C200C41301 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Credentials.plist; path = ../../codify/Codify/Credentials.plist; sourceTree = "<group>"; };
+		27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = ../../codify/Codify/AuthorizationViewController.swift; sourceTree = "<group>"; };
+		27F6C57B1B780BB800C41301 /* AuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationService.swift; path = ../../codify/Codify/AuthorizationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				2774571A1B77807D00AA0EFD /* Images.xcassets */,
 				2774571C1B77807D00AA0EFD /* LaunchScreen.xib */,
 				277457111B77807D00AA0EFD /* Supporting Files */,
+				27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */,
+				27F6C57B1B780BB800C41301 /* AuthorizationService.swift */,
 			);
 			path = Codify;
 			sourceTree = "<group>";
@@ -216,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F6C57A1B78070C00C41301 /* AuthorizationViewController.swift in Sources */,
 				277457161B77807D00AA0EFD /* ViewController.swift in Sources */,
 				277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */,
+				27F6C57C1B780BB800C41301 /* AuthorizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
