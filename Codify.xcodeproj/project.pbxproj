@@ -16,6 +16,8 @@
 		27F6C57A1B78070C00C41301 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */; };
 		27F6C57C1B780BB800C41301 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57B1B780BB800C41301 /* AuthorizationService.swift */; };
 		27F6C57E1B78246500C41301 /* AuthorizationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */; };
+		27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57F1B7986C900C41301 /* NSURL+Query.swift */; };
+		27F6C5821B798A7300C41301 /* NSURL+QueryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5811B798A7300C41301 /* NSURL+QueryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = ../../codify/Codify/AuthorizationViewController.swift; sourceTree = "<group>"; };
 		27F6C57B1B780BB800C41301 /* AuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationService.swift; path = ../../codify/Codify/AuthorizationService.swift; sourceTree = "<group>"; };
 		27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationServiceTest.swift; path = ../../codify/CodifyTests/AuthorizationServiceTest.swift; sourceTree = "<group>"; };
+		27F6C57F1B7986C900C41301 /* NSURL+Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+Query.swift"; path = "../../codify/Codify/NSURL+Query.swift"; sourceTree = "<group>"; };
+		27F6C5811B798A7300C41301 /* NSURL+QueryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+QueryTest.swift"; path = "../../codify/CodifyTests/NSURL+QueryTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				277457111B77807D00AA0EFD /* Supporting Files */,
 				27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */,
 				27F6C57B1B780BB800C41301 /* AuthorizationService.swift */,
+				27F6C57F1B7986C900C41301 /* NSURL+Query.swift */,
 			);
 			path = Codify;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			children = (
 				277457271B77807D00AA0EFD /* Supporting Files */,
 				27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */,
+				27F6C5811B798A7300C41301 /* NSURL+QueryTest.swift */,
 			);
 			path = CodifyTests;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				27F6C57A1B78070C00C41301 /* AuthorizationViewController.swift in Sources */,
 				277457161B77807D00AA0EFD /* ViewController.swift in Sources */,
 				277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */,
+				27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */,
 				27F6C57C1B780BB800C41301 /* AuthorizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27F6C57E1B78246500C41301 /* AuthorizationServiceTest.swift in Sources */,
+				27F6C5821B798A7300C41301 /* NSURL+QueryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
