@@ -26,4 +26,8 @@ public extension NSURL {
         return queryParams
     }
     
+    public func queryValueForKey(key: String) -> String {
+        return queryParams()[key] != nil ? queryParams()[key]!: ""
+    }
+    
 }

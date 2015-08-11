@@ -20,4 +20,16 @@ class NSURL_QueryTest: XCTestCase {
         XCTAssertEqual(queryParams["param2"]!, "value2")
     }
     
+    func testQueryValueForKeyWithValidKeyShouldReturnValueAsString() {
+        let url = NSURL(string: "http://example.com?a=123")
+        
+        XCTAssertEqual(url!.queryValueForKey("a"), "123")
+    }
+    
+    func testQueryValueForKeyWithInvalidKeyShouldReturnEmptyString() {
+        let url = NSURL(string: "http://example.com?param1=value1")
+        
+        XCTAssertEqual(url!.queryValueForKey("invalid_param"), "")
+    }
+    
 }
