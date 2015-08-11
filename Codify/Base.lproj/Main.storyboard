@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Y8D-zA-ajx" kind="presentation" id="uct-6Y-cX0"/>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pd2-My-IrI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,39 +35,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--Authorization View Controller-->
-        <scene sceneID="R0J-hR-EXb">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g9n-fa-bzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Y8D-zA-ajx" customClass="AuthorizationViewController" customModule="Codify" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jmK-xs-XwZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mfd-jR-Ics"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GPB-bp-Cdc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IvI-Zl-J3h">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="IvI-Zl-J3h" secondAttribute="trailing" constant="-16" id="0Ls-QV-hCh"/>
-                            <constraint firstItem="IvI-Zl-J3h" firstAttribute="leading" secondItem="GPB-bp-Cdc" secondAttribute="leadingMargin" constant="-16" id="0cH-Ar-hwe"/>
-                            <constraint firstItem="IvI-Zl-J3h" firstAttribute="top" secondItem="jmK-xs-XwZ" secondAttribute="bottom" constant="-20" id="330-Si-lpe"/>
-                            <constraint firstItem="Mfd-jR-Ics" firstAttribute="top" secondItem="IvI-Zl-J3h" secondAttribute="bottom" id="xeD-qB-nFx"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="IvI-Zl-J3h" id="MnO-fp-Khs"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="328" y="1089"/>
         </scene>
     </scenes>
 </document>
