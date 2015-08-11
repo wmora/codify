@@ -15,6 +15,7 @@ public class AuthorizationService {
     let clientIdKey = "client_id"
     let clientSecretKey = "client_secret"
     let redirectURIKey = "redirect_uri"
+    let redirectURI = "nispok-codify://oauth-callback"
     let scopeKey = "scope"
     let state = "state"
     
@@ -31,7 +32,7 @@ public class AuthorizationService {
         let clientId = credentials[clientIdPlistKey] as! NSString
         let clientSecret = credentials[clientSecretPlistKey] as! NSString
         let baseURL = "https://github.com/login/oauth/authorize"
-        let url = NSURL(string: "\(baseURL)?\(clientIdKey)=\(clientId)&\(clientSecretKey)=\(clientSecret)")
+        let url = NSURL(string: "\(baseURL)?\(clientIdKey)=\(clientId)&\(clientSecretKey)=\(clientSecret)&\(redirectURIKey)=\(redirectURI)")
         return url!
     }
     
