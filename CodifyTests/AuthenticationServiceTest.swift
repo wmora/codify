@@ -9,10 +9,10 @@
 import XCTest
 import Codify
 
-class AuthorizationServiceTest: XCTestCase {
+class AuthenticationServiceTest: XCTestCase {
     
     func testAuthorizationRequestURL() {
-        let authorizationService = AuthorizationService()
+        let authorizationService = AuthenticationService()
         let actualURL = authorizationService.authorizationRequestURL()
         let credentialsPath = NSBundle.mainBundle().pathForResource("Credentials", ofType: "plist")
         let credentials = NSDictionary(contentsOfFile: credentialsPath!)!

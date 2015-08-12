@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class AuthorizationService {
+public class AuthenticationService {
     
     let clientIdPlistKey = "GitHub Client ID"
     let clientSecretPlistKey = "GitHub Client Secret"

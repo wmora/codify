@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var authorizationService = AuthorizationService()
+    var authenticationService = AuthenticationService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func loginPressed(sender: AnyObject) {
-        let authorizationUrl = authorizationService.authorizationRequestURL()
+        let authorizationUrl = authenticationService.authorizationRequestURL()
         UIApplication.sharedApplication().openURL(authorizationUrl)
     }
 
