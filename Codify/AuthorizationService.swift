@@ -22,10 +22,6 @@ public class AuthorizationService {
     public init() {
     }
     
-    func authorizationRequest() -> NSURLRequest {
-        return NSURLRequest(URL: authorizationRequestURL())
-    }
-    
     public func authorizationRequestURL() -> NSURL {
         let credentialsPath = NSBundle.mainBundle().pathForResource("Credentials", ofType: "plist")
         let credentials = NSDictionary(contentsOfFile: credentialsPath!)!
