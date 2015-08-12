@@ -18,6 +18,7 @@ public class AuthenticationService {
     let redirectURI = "nispok-codify://oauth-callback"
     let scopeKey = "scope"
     let state = "state"
+    let accessTokenKey = "access_token"
     
     public init() {
     }
@@ -30,6 +31,12 @@ public class AuthenticationService {
         let baseURL = "https://github.com/login/oauth/authorize"
         let url = NSURL(string: "\(baseURL)?\(clientIdKey)=\(clientId)&\(clientSecretKey)=\(clientSecret)&\(redirectURIKey)=\(redirectURI)")
         return url!
+    }
+    
+    public func isAuthenticated() ->  Bool {
+        let accessToken = NSUserDefaults.standardUserDefaults().stringForKey(accessTokenKey)
+        
+        return accessToken != nil && !accessToken!.isEmpty
     }
     
 }

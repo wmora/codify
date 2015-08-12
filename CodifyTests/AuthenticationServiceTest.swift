@@ -11,6 +11,10 @@ import Codify
 
 class AuthenticationServiceTest: XCTestCase {
     
+    override func tearDown() {
+        NSUserDefaults.resetStandardUserDefaults()
+    }
+    
     func testAuthorizationRequestURL() {
         let authorizationService = AuthenticationService()
         let actualURL = authorizationService.authorizationRequestURL()
@@ -22,6 +26,25 @@ class AuthenticationServiceTest: XCTestCase {
         let expectedURL = NSURL(string: "https://github.com/login/oauth/authorize?client_id=\(clientId)&client_secret=\(clientSecret)&redirect_uri=nispok-codify://oauth-callback")
         
         XCTAssertEqual(expectedURL!, actualURL)
+    }
+    
+    func testIsAuthenticatedWithNilAccessTokenShouldReturnFalse() {
+        NSUserDefaults.resetStandardUserDefaults()
+        
+        XCTAssertFalse(AuthenticationService().isAuthenticated())
+    }
+
+    func testIsAuthenticatedWithEmptyAccessTokenShouldReturnFalse() {
+        NSUserDefaults.standardUserDefaults().setObject("", forKey: "access_token")
+        
+        XCTAssertFalse(AuthenticationService().isAuthenticated())
+    }
+
+    
+    func testIsAuthenticatedWithAccessTokenShouldReturnTrue() {
+        NSUserDefaults.standardUserDefaults().setObject("1234", forKey: "access_token")
+        
+        XCTAssertTrue(AuthenticationService().isAuthenticated())
     }
     
 }
