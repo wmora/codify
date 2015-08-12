@@ -13,7 +13,6 @@
 		2774571B1B77807D00AA0EFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2774571A1B77807D00AA0EFD /* Images.xcassets */; };
 		2774571E1B77807D00AA0EFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2774571C1B77807D00AA0EFD /* LaunchScreen.xib */; };
 		27F6C5761B7798C200C41301 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27F6C5751B7798C200C41301 /* Credentials.plist */; };
-		27F6C57A1B78070C00C41301 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */; };
 		27F6C57C1B780BB800C41301 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57B1B780BB800C41301 /* AuthorizationService.swift */; };
 		27F6C57E1B78246500C41301 /* AuthorizationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */; };
 		27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57F1B7986C900C41301 /* NSURL+Query.swift */; };
@@ -41,7 +40,6 @@
 		277457231B77807D00AA0EFD /* CodifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277457281B77807D00AA0EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F6C5751B7798C200C41301 /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Credentials.plist; path = ../../codify/Codify/Credentials.plist; sourceTree = "<group>"; };
-		27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = ../../codify/Codify/AuthorizationViewController.swift; sourceTree = "<group>"; };
 		27F6C57B1B780BB800C41301 /* AuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationService.swift; path = ../../codify/Codify/AuthorizationService.swift; sourceTree = "<group>"; };
 		27F6C57D1B78246500C41301 /* AuthorizationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationServiceTest.swift; path = ../../codify/CodifyTests/AuthorizationServiceTest.swift; sourceTree = "<group>"; };
 		27F6C57F1B7986C900C41301 /* NSURL+Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+Query.swift"; path = "../../codify/Codify/NSURL+Query.swift"; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				2774571A1B77807D00AA0EFD /* Images.xcassets */,
 				2774571C1B77807D00AA0EFD /* LaunchScreen.xib */,
 				277457111B77807D00AA0EFD /* Supporting Files */,
-				27F6C5791B78070C00C41301 /* AuthorizationViewController.swift */,
 				27F6C57B1B780BB800C41301 /* AuthorizationService.swift */,
 				27F6C57F1B7986C900C41301 /* NSURL+Query.swift */,
 			);
@@ -228,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27F6C57A1B78070C00C41301 /* AuthorizationViewController.swift in Sources */,
 				277457161B77807D00AA0EFD /* ViewController.swift in Sources */,
 				277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */,
 				27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */,
