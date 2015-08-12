@@ -27,9 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let code = url.queryValueForKey("code")
         
-        print(code)
+        if (!code.isEmpty) {
+            AuthenticationService().authenticate(code)
+        }
         
-        return true
+        return !code.isEmpty
     }
 
     func applicationWillResignActive(application: UIApplication) {
