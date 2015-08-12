@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277457131B77807D00AA0EFD /* AppDelegate.swift */; };
 		277457161B77807D00AA0EFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277457151B77807D00AA0EFD /* ViewController.swift */; };
-		277457191B77807D00AA0EFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277457171B77807D00AA0EFD /* Main.storyboard */; };
 		2774571B1B77807D00AA0EFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2774571A1B77807D00AA0EFD /* Images.xcassets */; };
 		2774571E1B77807D00AA0EFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2774571C1B77807D00AA0EFD /* LaunchScreen.xib */; };
 		27F6C5761B7798C200C41301 /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27F6C5751B7798C200C41301 /* Credentials.plist */; };
@@ -17,6 +16,8 @@
 		27F6C57E1B78246500C41301 /* AuthenticationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57D1B78246500C41301 /* AuthenticationServiceTest.swift */; };
 		27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C57F1B7986C900C41301 /* NSURL+Query.swift */; };
 		27F6C5821B798A7300C41301 /* NSURL+QueryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5811B798A7300C41301 /* NSURL+QueryTest.swift */; };
+		27F6C5861B7C0A3100C41301 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5851B7C0A3100C41301 /* DismissSegue.swift */; };
+		27F6C5871B7C0B7300C41301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277457171B77807D00AA0EFD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		27F6C57D1B78246500C41301 /* AuthenticationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceTest.swift; sourceTree = "<group>"; };
 		27F6C57F1B7986C900C41301 /* NSURL+Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+Query.swift"; path = "../../codify/Codify/NSURL+Query.swift"; sourceTree = "<group>"; };
 		27F6C5811B798A7300C41301 /* NSURL+QueryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+QueryTest.swift"; path = "../../codify/CodifyTests/NSURL+QueryTest.swift"; sourceTree = "<group>"; };
+		27F6C5851B7C0A3100C41301 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				277457111B77807D00AA0EFD /* Supporting Files */,
 				27F6C57B1B780BB800C41301 /* AuthenticationService.swift */,
 				27F6C57F1B7986C900C41301 /* NSURL+Query.swift */,
+				27F6C5851B7C0A3100C41301 /* DismissSegue.swift */,
 			);
 			path = Codify;
 			sourceTree = "<group>";
@@ -204,10 +207,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277457191B77807D00AA0EFD /* Main.storyboard in Resources */,
 				27F6C5761B7798C200C41301 /* Credentials.plist in Resources */,
 				2774571E1B77807D00AA0EFD /* LaunchScreen.xib in Resources */,
 				2774571B1B77807D00AA0EFD /* Images.xcassets in Resources */,
+				27F6C5871B7C0B7300C41301 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277457161B77807D00AA0EFD /* ViewController.swift in Sources */,
+				27F6C5861B7C0A3100C41301 /* DismissSegue.swift in Sources */,
 				277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */,
 				27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */,
 				27F6C57C1B780BB800C41301 /* AuthenticationService.swift in Sources */,
