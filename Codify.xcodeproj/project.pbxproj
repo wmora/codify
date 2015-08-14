@@ -135,7 +135,7 @@
 			children = (
 				27F6C57B1B780BB800C41301 /* AuthenticationService.swift */,
 			);
-			name = Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
