@@ -89,13 +89,13 @@
 		277457101B77807D00AA0EFD /* Codify */ = {
 			isa = PBXGroup;
 			children = (
+				27F6C58B1B7EB72200C41301 /* Services */,
 				277457131B77807D00AA0EFD /* AppDelegate.swift */,
 				277457151B77807D00AA0EFD /* ViewController.swift */,
 				277457171B77807D00AA0EFD /* Main.storyboard */,
 				2774571A1B77807D00AA0EFD /* Images.xcassets */,
 				2774571C1B77807D00AA0EFD /* LaunchScreen.xib */,
 				277457111B77807D00AA0EFD /* Supporting Files */,
-				27F6C57B1B780BB800C41301 /* AuthenticationService.swift */,
 				27F6C57F1B7986C900C41301 /* NSURL+Query.swift */,
 				27F6C5851B7C0A3100C41301 /* DismissSegue.swift */,
 				27F6C5881B7EB57800C41301 /* CreateIssueViewController.swift */,
@@ -128,6 +128,14 @@
 				277457281B77807D00AA0EFD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27F6C58B1B7EB72200C41301 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27F6C57B1B780BB800C41301 /* AuthenticationService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
