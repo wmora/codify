@@ -51,7 +51,7 @@
         <!--Create Issue-->
         <scene sceneID="dOr-iV-mE9">
             <objects>
-                <viewController title="Create Issue" modalPresentationStyle="currentContext" id="hvu-hU-Tcq" sceneMemberID="viewController">
+                <viewController title="Create Issue" modalPresentationStyle="currentContext" id="hvu-hU-Tcq" customClass="CreateIssueViewController" customModule="Codify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Gg-tp-AIa"/>
                         <viewControllerLayoutGuide type="bottom" id="7v0-dY-qPr"/>
@@ -105,9 +105,17 @@
                                 <segue destination="BYZ-38-t0r" kind="custom" customClass="DismissSegue" customModule="Codify" id="xpk-yl-TDp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="QyM-Ds-yJv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="QyM-Ds-yJv">
+                            <connections>
+                                <action selector="createIssue:" destination="hvu-hU-Tcq" id="hT0-LK-Yns"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="issueBody" destination="vKR-2Y-Ovo" id="8dU-hz-ucx"/>
+                        <outlet property="issueTitle" destination="C2V-9y-fY4" id="cFg-Yx-dll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGy-xa-WaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
