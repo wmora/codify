@@ -21,6 +21,8 @@
 		27F6C58A1B7EB61500C41301 /* CreateIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5881B7EB57800C41301 /* CreateIssueViewController.swift */; };
 		27F6C5991B7EBD4900C41301 /* NSMutableURLRequest+GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C5981B7EBD4900C41301 /* NSMutableURLRequest+GitHub.swift */; };
 		27F6C59B1B7EBFF500C41301 /* NSMutableURLRequest+GitHubTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C59A1B7EBFF500C41301 /* NSMutableURLRequest+GitHubTest.swift */; };
+		27F6C59D1B7EC4BC00C41301 /* IssuesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C59C1B7EC4BC00C41301 /* IssuesService.swift */; };
+		27F6C59F1B7EC71200C41301 /* IssuesServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6C59E1B7EC71200C41301 /* IssuesServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		27F6C5881B7EB57800C41301 /* CreateIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIssueViewController.swift; sourceTree = "<group>"; };
 		27F6C5981B7EBD4900C41301 /* NSMutableURLRequest+GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+GitHub.swift"; sourceTree = "<group>"; };
 		27F6C59A1B7EBFF500C41301 /* NSMutableURLRequest+GitHubTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+GitHubTest.swift"; sourceTree = "<group>"; };
+		27F6C59C1B7EC4BC00C41301 /* IssuesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesService.swift; sourceTree = "<group>"; };
+		27F6C59E1B7EC71200C41301 /* IssuesServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				27F6C57D1B78246500C41301 /* AuthenticationServiceTest.swift */,
 				27F6C5811B798A7300C41301 /* NSURL+QueryTest.swift */,
 				27F6C59A1B7EBFF500C41301 /* NSMutableURLRequest+GitHubTest.swift */,
+				27F6C59E1B7EC71200C41301 /* IssuesServiceTest.swift */,
 			);
 			path = CodifyTests;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				27F6C57B1B780BB800C41301 /* AuthenticationService.swift */,
+				27F6C59C1B7EC4BC00C41301 /* IssuesService.swift */,
 				27F6C5981B7EBD4900C41301 /* NSMutableURLRequest+GitHub.swift */,
 			);
 			path = Services;
@@ -248,6 +254,7 @@
 				27F6C5991B7EBD4900C41301 /* NSMutableURLRequest+GitHub.swift in Sources */,
 				277457161B77807D00AA0EFD /* ViewController.swift in Sources */,
 				27F6C5861B7C0A3100C41301 /* DismissSegue.swift in Sources */,
+				27F6C59D1B7EC4BC00C41301 /* IssuesService.swift in Sources */,
 				27F6C58A1B7EB61500C41301 /* CreateIssueViewController.swift in Sources */,
 				277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */,
 				27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */,
@@ -262,6 +269,7 @@
 				27F6C59B1B7EBFF500C41301 /* NSMutableURLRequest+GitHubTest.swift in Sources */,
 				27F6C57E1B78246500C41301 /* AuthenticationServiceTest.swift in Sources */,
 				27F6C5821B798A7300C41301 /* NSURL+QueryTest.swift in Sources */,
+				27F6C59F1B7EC71200C41301 /* IssuesServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
