@@ -12,13 +12,15 @@ class CreateIssueViewController: UIViewController {
     
     @IBOutlet weak var issueTitle: UITextField!
     @IBOutlet weak var issueBody: UITextView!
+    @IBOutlet weak var repo: UITextField!
+    @IBOutlet weak var owner: UITextField!
     
     @IBAction func createIssue(sender: AnyObject) {
-        if (issueTitle.text.isEmpty && issueBody.text.isEmpty) {
+        if (repo.text.isEmpty || owner.text.isEmpty || issueTitle.text.isEmpty) {
             return
         }
         
-        let service = IssuesService(owner:"wmora", repo:"test-repo")
+        let service = IssuesService(owner: owner.text, repo:repo.text)
         service.createIssue(issueTitle.text, body: issueBody.text)
     }
     

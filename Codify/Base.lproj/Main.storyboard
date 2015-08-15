@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -61,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repo" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-lH-fJb">
-                                <rect key="frame" x="16" y="14" width="568" height="30"/>
+                                <rect key="frame" x="16" y="14" width="268" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xaX-z5-dlp"/>
                                 </constraints>
@@ -85,19 +86,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Owner" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSj-CJ-NPZ">
+                                <rect key="frame" x="316" y="14" width="268" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ruT-jH-cV4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ruT-jH-cV4"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f4s-lH-fJb" firstAttribute="top" secondItem="3Gg-tp-AIa" secondAttribute="bottom" constant="14" id="2OC-qx-WVw"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="leading" secondItem="f4s-lH-fJb" secondAttribute="trailing" constant="32" id="55g-6b-84X"/>
                             <constraint firstItem="C2V-9y-fY4" firstAttribute="leading" secondItem="x4o-uF-Qut" secondAttribute="leadingMargin" id="82c-mL-rAj"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="top" secondItem="3Gg-tp-AIa" secondAttribute="bottom" constant="14" id="EiU-m0-fQg"/>
                             <constraint firstItem="vKR-2Y-Ovo" firstAttribute="trailing" secondItem="x4o-uF-Qut" secondAttribute="trailingMargin" id="FG7-0m-SFl"/>
                             <constraint firstItem="f4s-lH-fJb" firstAttribute="leading" secondItem="x4o-uF-Qut" secondAttribute="leadingMargin" id="Hdy-67-7eH"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="width" secondItem="f4s-lH-fJb" secondAttribute="width" id="Ox8-pt-PFP"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="leading" secondItem="f4s-lH-fJb" secondAttribute="trailing" constant="8" id="R8H-AQ-gLH"/>
                             <constraint firstItem="f4s-lH-fJb" firstAttribute="trailing" secondItem="x4o-uF-Qut" secondAttribute="trailingMargin" id="RUX-VQ-OMK"/>
                             <constraint firstItem="vKR-2Y-Ovo" firstAttribute="top" secondItem="C2V-9y-fY4" secondAttribute="bottom" constant="8" id="VTw-vf-B4k"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="width" secondItem="f4s-lH-fJb" secondAttribute="width" id="WHs-WP-47F"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="height" secondItem="f4s-lH-fJb" secondAttribute="height" id="XNw-Uw-zc5"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="trailing" secondItem="x4o-uF-Qut" secondAttribute="trailingMargin" id="aOI-gu-298"/>
+                            <constraint firstItem="f4s-lH-fJb" firstAttribute="width" secondItem="x4o-uF-Qut" secondAttribute="width" multiplier="0.5" constant="-32" id="aaa-fV-5pB"/>
                             <constraint firstItem="vKR-2Y-Ovo" firstAttribute="leading" secondItem="x4o-uF-Qut" secondAttribute="leadingMargin" id="ag9-Wt-tzy"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="leading" secondItem="f4s-lH-fJb" secondAttribute="trailing" id="d7x-68-E6C"/>
                             <constraint firstItem="C2V-9y-fY4" firstAttribute="top" secondItem="f4s-lH-fJb" secondAttribute="bottom" constant="8" id="j9w-OZ-Rfj"/>
                             <constraint firstItem="C2V-9y-fY4" firstAttribute="trailing" secondItem="x4o-uF-Qut" secondAttribute="trailingMargin" id="sPV-Dw-6FV"/>
+                            <constraint firstItem="DSj-CJ-NPZ" firstAttribute="width" secondItem="f4s-lH-fJb" secondAttribute="width" id="xGt-BH-4MB"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RUX-VQ-OMK"/>
+                                <exclude reference="R8H-AQ-gLH"/>
+                                <exclude reference="WHs-WP-47F"/>
+                                <exclude reference="aOI-gu-298"/>
+                                <exclude reference="d7x-68-E6C"/>
+                                <exclude reference="xGt-BH-4MB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Issue" id="97c-VU-Qwh">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="Ush-pA-zgw">
@@ -115,6 +149,8 @@
                     <connections>
                         <outlet property="issueBody" destination="vKR-2Y-Ovo" id="8dU-hz-ucx"/>
                         <outlet property="issueTitle" destination="C2V-9y-fY4" id="cFg-Yx-dll"/>
+                        <outlet property="owner" destination="DSj-CJ-NPZ" id="va0-oh-FXx"/>
+                        <outlet property="repo" destination="f4s-lH-fJb" id="9Yf-Nd-GCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGy-xa-WaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
