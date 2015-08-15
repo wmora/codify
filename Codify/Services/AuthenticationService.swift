@@ -49,13 +49,18 @@ public class AuthenticationService {
     }
     
     public func isAuthenticated() ->  Bool {
-        let accessToken = NSUserDefaults.standardUserDefaults().stringForKey(accessTokenKey)
+        let token = accessToken()
         
-        return accessToken != nil && !accessToken!.isEmpty
+        return token != nil && !token!.isEmpty
     }
     
     private func saveAccessToken(accessToken: String) {
         NSUserDefaults.standardUserDefaults().setValue(accessToken, forKey: accessTokenKey)
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func accessToken() -> String? {
+        return NSUserDefaults.standardUserDefaults().stringForKey(accessTokenKey)
     }
     
     func credentials() -> NSDictionary {
