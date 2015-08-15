@@ -18,7 +18,7 @@ public class IssuesService {
         self.repo = repo
     }
     
-    func createIssue(owner: String, repo: String, title: String, body: String) {
+    func createIssue(title: String, body: String) {
         
     }
     
