@@ -19,7 +19,21 @@ public class IssuesService {
     }
     
     func createIssue(title: String, body: String) {
-        
+        let request = NSMutableURLRequest(URL: fullURL())
+        request.HTTPMethod = "POST"
+        let params = ["title": title, "body": body]
+        request.HTTPBody = NSKeyedArchiver.archivedDataWithRootObject(params)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) {
+            (data, response, error) -> Void in
+            if (error != nil) {
+                return
+            }
+            let responseData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            print("Issue created!")
+            print("\(responseData)")
+        }
+        task.resume()
     }
     
     public func fullURL() -> NSURL {
