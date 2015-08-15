@@ -16,7 +16,8 @@ public class AuthenticationService {
     let clientSecretKey = "client_secret"
     let redirectURIKey = "redirect_uri"
     let redirectURI = "nispok-codify://oauth-callback"
-    let scopeKey = "scope"
+    let scopesKey = "scopes"
+    let scopes = "repo,notifications,user"
     let state = "state"
     let accessTokenKey = "access_token"
     let codeKey = "code"
@@ -26,7 +27,7 @@ public class AuthenticationService {
     
     public func authorizationRequestURL() -> NSURL {
         let baseURL = "https://github.com/login/oauth/authorize"
-        let url = NSURL(string: "\(baseURL)?\(clientIdKey)=\(clientId())&\(clientSecretKey)=\(clientSecret())&\(redirectURIKey)=\(redirectURI)")
+        let url = NSURL(string: "\(baseURL)?\(clientIdKey)=\(clientId())&\(clientSecretKey)=\(clientSecret())&\(redirectURIKey)=\(redirectURI)&\(scopesKey)=\(scopes)")
         return url!
     }
     
