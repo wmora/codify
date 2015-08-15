@@ -38,5 +38,12 @@ class NSMutableURLRequest_GitHubTest: XCTestCase {
         
         XCTAssertNil(urlRequest.valueForHTTPHeaderField("Authorization"))
     }
+    
+    func testGitHubHeadersShouldHaveJSONContentType() {
+        let urlRequest = NSMutableURLRequest(URL: NSURL(string: "https://example.com")!)
+        urlRequest.gitHubHeaders()
+        
+        XCTAssertEqual(urlRequest.valueForHTTPHeaderField("Content-Type")!, "application/json")
+    }
 
 }
