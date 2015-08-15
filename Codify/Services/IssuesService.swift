@@ -20,6 +20,7 @@ public class IssuesService {
     
     func createIssue(title: String, body: String) {
         let request = NSMutableURLRequest(URL: fullURL())
+        request.gitHubHeaders()
         request.HTTPMethod = "POST"
         let params = ["title": title, "body": body]
         request.HTTPBody = NSKeyedArchiver.archivedDataWithRootObject(params)
