@@ -25,7 +25,7 @@ class NSMutableURLRequest_GitHubTest: XCTestCase {
         let urlRequest = NSMutableURLRequest(URL: NSURL(string: "https://example.com")!)
         urlRequest.gitHubHeaders()
         
-        XCTAssertEqual(urlRequest.valueForHTTPHeaderField("Authorization")!, "my_access_token")
+        XCTAssertEqual(urlRequest.valueForHTTPHeaderField("Authorization")!, "token my_access_token")
         
         NSUserDefaults.standardUserDefaults().removeObjectForKey("access_token")
     }

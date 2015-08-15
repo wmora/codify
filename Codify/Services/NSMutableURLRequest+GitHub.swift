@@ -14,7 +14,7 @@ public extension NSMutableURLRequest {
         setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
         let authenticationService = AuthenticationService()
         if authenticationService.isAuthenticated() {
-            setValue(authenticationService.accessToken(), forHTTPHeaderField: "Authorization")
+            setValue("token \(authenticationService.accessToken()!)", forHTTPHeaderField: "Authorization")
         }
     }
 }
