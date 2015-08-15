@@ -16,5 +16,6 @@ public extension NSMutableURLRequest {
         if authenticationService.isAuthenticated() {
             setValue("token \(authenticationService.accessToken()!)", forHTTPHeaderField: "Authorization")
         }
+        setValue("application/json", forHTTPHeaderField: "Content-Type")
     }
 }
