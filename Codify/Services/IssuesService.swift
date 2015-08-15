@@ -23,7 +23,7 @@ public class IssuesService {
         request.gitHubHeaders()
         request.HTTPMethod = "POST"
         let params = ["title": title, "body": body]
-        request.HTTPBody = NSKeyedArchiver.archivedDataWithRootObject(params)
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: nil)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
