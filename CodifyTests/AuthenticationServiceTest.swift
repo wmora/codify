@@ -23,7 +23,7 @@ class AuthenticationServiceTest: XCTestCase {
         let clientId = credentials["GitHub Client ID"] as! NSString
         let clientSecret = credentials["GitHub Client Secret"] as! NSString
 
-        let expectedURL = NSURL(string: "https://github.com/login/oauth/authorize?client_id=\(clientId)&client_secret=\(clientSecret)&redirect_uri=nispok-codify://oauth-callback&scopes=repo,notifications,user")
+        let expectedURL = NSURL(string: "https://github.com/login/oauth/authorize?client_id=\(clientId)&client_secret=\(clientSecret)&redirect_uri=nispok-codify://oauth-callback&scope=repo,notifications,user")
         
         XCTAssertEqual(expectedURL!, actualURL)
     }

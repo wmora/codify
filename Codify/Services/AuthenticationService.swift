@@ -16,7 +16,7 @@ public class AuthenticationService {
     let clientSecretKey = "client_secret"
     let redirectURIKey = "redirect_uri"
     let redirectURI = "nispok-codify://oauth-callback"
-    let scopesKey = "scopes"
+    let scopesKey = "scope"
     let scopes = "repo,notifications,user"
     let state = "state"
     let accessTokenKey = "access_token"
