@@ -78,11 +78,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKR-2Y-Ovo">
-                                <rect key="frame" x="16" y="90" width="568" height="426"/>
+                                <rect key="frame" x="16" y="90" width="568" height="402"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="426" id="EtA-vD-UYR"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -99,18 +96,28 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xU1-m4-Izk">
+                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f4s-lH-fJb" firstAttribute="top" secondItem="3Gg-tp-AIa" secondAttribute="bottom" constant="14" id="2OC-qx-WVw"/>
                             <constraint firstItem="DSj-CJ-NPZ" firstAttribute="leading" secondItem="f4s-lH-fJb" secondAttribute="trailing" constant="32" id="55g-6b-84X"/>
+                            <constraint firstItem="xU1-m4-Izk" firstAttribute="top" secondItem="vKR-2Y-Ovo" secondAttribute="bottom" id="5bl-TP-Osy"/>
                             <constraint firstItem="C2V-9y-fY4" firstAttribute="leading" secondItem="x4o-uF-Qut" secondAttribute="leadingMargin" id="82c-mL-rAj"/>
+                            <constraint firstItem="xU1-m4-Izk" firstAttribute="leading" secondItem="x4o-uF-Qut" secondAttribute="leadingMargin" constant="-16" id="CtQ-fF-RFI"/>
+                            <constraint firstItem="vKR-2Y-Ovo" firstAttribute="centerX" secondItem="xU1-m4-Izk" secondAttribute="centerX" id="DGg-hH-JkP"/>
                             <constraint firstItem="DSj-CJ-NPZ" firstAttribute="top" secondItem="3Gg-tp-AIa" secondAttribute="bottom" constant="14" id="EiU-m0-fQg"/>
                             <constraint firstItem="vKR-2Y-Ovo" firstAttribute="trailing" secondItem="x4o-uF-Qut" secondAttribute="trailingMargin" id="FG7-0m-SFl"/>
+                            <constraint firstItem="vKR-2Y-Ovo" firstAttribute="bottom" secondItem="xU1-m4-Izk" secondAttribute="top" id="FlC-no-DUC"/>
                             <constraint firstItem="f4s-lH-fJb" firstAttribute="leading" secondItem="x4o-uF-Qut" secondAttribute="leadingMargin" id="Hdy-67-7eH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xU1-m4-Izk" secondAttribute="trailing" constant="-16" id="Hl7-ZI-dCI"/>
                             <constraint firstItem="DSj-CJ-NPZ" firstAttribute="width" secondItem="f4s-lH-fJb" secondAttribute="width" id="Ox8-pt-PFP"/>
                             <constraint firstItem="DSj-CJ-NPZ" firstAttribute="leading" secondItem="f4s-lH-fJb" secondAttribute="trailing" constant="8" id="R8H-AQ-gLH"/>
                             <constraint firstItem="f4s-lH-fJb" firstAttribute="trailing" secondItem="x4o-uF-Qut" secondAttribute="trailingMargin" id="RUX-VQ-OMK"/>
+                            <constraint firstItem="7v0-dY-qPr" firstAttribute="top" secondItem="xU1-m4-Izk" secondAttribute="bottom" id="TWt-D1-UCd"/>
                             <constraint firstItem="vKR-2Y-Ovo" firstAttribute="top" secondItem="C2V-9y-fY4" secondAttribute="bottom" constant="8" id="VTw-vf-B4k"/>
                             <constraint firstItem="DSj-CJ-NPZ" firstAttribute="width" secondItem="f4s-lH-fJb" secondAttribute="width" id="WHs-WP-47F"/>
                             <constraint firstItem="DSj-CJ-NPZ" firstAttribute="height" secondItem="f4s-lH-fJb" secondAttribute="height" id="XNw-Uw-zc5"/>
@@ -125,6 +132,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="RUX-VQ-OMK"/>
+                                <exclude reference="DGg-hH-JkP"/>
+                                <exclude reference="FlC-no-DUC"/>
                                 <exclude reference="R8H-AQ-gLH"/>
                                 <exclude reference="WHs-WP-47F"/>
                                 <exclude reference="aOI-gu-298"/>
