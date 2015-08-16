@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateIssueViewController: UIViewController {
+class CreateIssueViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var issueTitle: UITextField!
     @IBOutlet weak var issueBody: UITextView!
@@ -22,6 +22,25 @@ class CreateIssueViewController: UIViewController {
         
         let service = IssuesService(owner: owner.text, repo:repo.text)
         service.createIssue(issueTitle.text, body: issueBody.text)
+    }
+    
+    @IBAction func attachImage(sender: AnyObject) {
+        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            return
+        }
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePickerController.delegate = self
+        presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        let imageData = UIImageJPEGRepresentation(image, 0)
+        let imageBase64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
+        
+        issueBody.text = "\(issueBody.text)\n\n<img src=\"data:image/jpg;base64,\(imageBase64String)\" width=250 />\n\n"
     }
     
 }
