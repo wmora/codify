@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		276B65E61B8173D700FEB80C /* IssuesServiceNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B65E51B8173D700FEB80C /* IssuesServiceNotification.swift */; };
 		277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277457131B77807D00AA0EFD /* AppDelegate.swift */; };
 		277457161B77807D00AA0EFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277457151B77807D00AA0EFD /* ViewController.swift */; };
 		2774571B1B77807D00AA0EFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2774571A1B77807D00AA0EFD /* Images.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		276B65E51B8173D700FEB80C /* IssuesServiceNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesServiceNotification.swift; sourceTree = "<group>"; };
 		2774570E1B77807D00AA0EFD /* Codify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277457121B77807D00AA0EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277457131B77807D00AA0EFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				27F6C57B1B780BB800C41301 /* AuthenticationService.swift */,
 				27F6C59C1B7EC4BC00C41301 /* IssuesService.swift */,
 				27F6C5981B7EBD4900C41301 /* NSMutableURLRequest+GitHub.swift */,
+				276B65E51B8173D700FEB80C /* IssuesServiceNotification.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				277457161B77807D00AA0EFD /* ViewController.swift in Sources */,
 				27F6C5861B7C0A3100C41301 /* DismissSegue.swift in Sources */,
 				27F6C59D1B7EC4BC00C41301 /* IssuesService.swift in Sources */,
+				276B65E61B8173D700FEB80C /* IssuesServiceNotification.swift in Sources */,
 				27F6C58A1B7EB61500C41301 /* CreateIssueViewController.swift in Sources */,
 				277457141B77807D00AA0EFD /* AppDelegate.swift in Sources */,
 				27F6C5801B7986C900C41301 /* NSURL+Query.swift in Sources */,

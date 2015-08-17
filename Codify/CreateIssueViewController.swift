@@ -43,4 +43,17 @@ class CreateIssueViewController: UIViewController, UIImagePickerControllerDelega
         issueBody.text = "\(issueBody.text)\n\n<img src=\"data:image/jpg;base64,\(imageBase64String)\" width=250 />\n\n"
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserverForName(IssuesServiceNotification.CreateSuccess.rawValue, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: {
+            (notification: NSNotification!) -> Void in
+                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        })
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: IssuesServiceNotification.CreateSuccess.rawValue, object: nil)
+    }
+    
 }

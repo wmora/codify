@@ -31,8 +31,7 @@ public class IssuesService {
                 return
             }
             let responseData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-            print("Issue created!")
-            print("\(responseData)")
+            NSNotificationCenter.defaultCenter().postNotificationName(IssuesServiceNotification.CreateSuccess.rawValue, object: self, userInfo: ["response": responseData])
         }
         task.resume()
     }
