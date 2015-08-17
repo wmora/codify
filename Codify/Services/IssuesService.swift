@@ -27,9 +27,12 @@ public class IssuesService {
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
-            if (error != nil) {
+                let statusCode = (response as? NSHTTPURLResponse)?.statusCode
+            if (statusCode < 200 || statusCode >= 400 || error != nil) {
+                NSNotificationCenter.defaultCenter().postNotificationName(IssuesServiceNotification.CreateFail.rawValue, object: self, userInfo: nil)
                 return
             }
+            
             let responseData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
             NSNotificationCenter.defaultCenter().postNotificationName(IssuesServiceNotification.CreateSuccess.rawValue, object: self, userInfo: ["response": responseData])
         }
