@@ -23,7 +23,11 @@ public class IssuesService {
         request.gitHubHeaders()
         request.HTTPMethod = "POST"
         let params = ["title": title, "body": body]
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: nil)
+        do {
+            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: [])
+        } catch _ {
+            request.HTTPBody = nil
+        }
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
@@ -33,7 +37,7 @@ public class IssuesService {
                 return
             }
             
-            let responseData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            let responseData = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             NSNotificationCenter.defaultCenter().postNotificationName(IssuesServiceNotification.CreateSuccess.rawValue, object: self, userInfo: ["response": responseData])
         }
         task.resume()

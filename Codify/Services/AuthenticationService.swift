@@ -43,7 +43,7 @@ public class AuthenticationService {
             if (error != nil) {
                 return
             }
-            let responseData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            let responseData = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             self.saveAccessToken(responseData[self.accessTokenKey] as! String)
         }
         task.resume()
