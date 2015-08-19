@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateIssueViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateIssueViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
     
     @IBOutlet weak var issueTitle: UITextField!
     @IBOutlet weak var issueBody: UITextView!
@@ -51,9 +51,30 @@ class CreateIssueViewController: UIViewController, UIImagePickerControllerDelega
         })
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        issueTitle.delegate = self
+        repo.delegate = self
+        owner.delegate = self
+        issueBody.delegate = self
+    }
+    
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: IssuesServiceNotification.CreateSuccess.rawValue, object: nil)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
     
 }
